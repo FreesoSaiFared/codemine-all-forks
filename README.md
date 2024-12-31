@@ -1,9 +1,13 @@
-# git-forks-analysis
+# codemine-all-forks
 
-Analyze forks network to find interesting forks, commits, file changes.
+
+GOAL Analyze forks network to find interesting forks, commits, file changes.
+Use LLMs to analyse the database. Integrate this functionality with VScode cline and other sourcecode analysis frameworks. 
 
 
 ## Why build it?
+
+* At this moment it is impossible to get a reliable and complete description of what a fork adds and what code it contains. This means that it is likely that sometimes features get implemented twice, or that approaches are missed completely. The idea of downloading all forks of a project should become a standard feature of git, perhaps.  
 
 * Frustration with navigation forks graph / network on GitHub
 * Too many forks with nothing interesting and noisy commits
@@ -12,7 +16,7 @@ Analyze forks network to find interesting forks, commits, file changes.
 ## How does it work?
 
 * Gets all forks and all branches into a single repository
-* Make available git data mining tools such as `gitinspector` and `git_stats`. Use the tools in this repository as they have been modified to work across all branches
+* Make available git data mining tools such as `gitinspector` and `git_stats`. Use the tools in this repository as they have been modified to work across all branches. *ADD LLM Descriptions of Code*
 * View other `Tips` below on how to search across the forks network using Git commands
 
 
@@ -21,7 +25,13 @@ Analyze forks network to find interesting forks, commits, file changes.
 
 ## How to install it?
 
+*This i would ideally want to integrate with a version of cline, this is a visual code extension that uses LLM and context to execute commands locally. A modified version of cline should instead of code generation, be customized to automate many of the analysis tasks that are described below. This will require creataing prompts that instruct this version of 'cline-forkmine' to integrate this repo and to have access to all tools mentioned below. 
+
+
+
 ```bash
+
+DONE THIS ON UBUNTU SERVER VIA SSH
 
 git clone https://github.com/hbt/git-forks-analysis
 cd git-forks-analysis
@@ -30,6 +40,7 @@ docker-compose pull
 ```
 
 ## How to use it?
+EVERYTHING BELOW SHOULD BE CONVERTED TO A PROMPT FORMAT SO THAT A USER CAN INTERACTIVELY QUERY THE FORKS IN A CHAT 
 
 To generate HTML visualization of forks
 
